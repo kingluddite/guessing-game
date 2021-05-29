@@ -1,0 +1,21 @@
+body {
+  margin: 1rem;
+}
+
+ol {
+  counter-reset: n;
+}
+
+li {
+  list-style: none;
+  counter-increment: n;
+}
+
+li::before {
+  content: 'Task ' counter(n) ':';
+  font-weight: bold;
+}
+
+.btn {
+  display: none;
+}
